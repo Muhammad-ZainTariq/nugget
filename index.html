@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday! 🎉</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Audio for Happy Birthday Song -->
+    <audio id="birthdaySong" preload="auto" loop>
+        <source src="Happy Birthday | Disco Singh | Diljit Dosanjh | Surveen Chawla | Latest Punjabi Songs 2024.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+</head>
+<body>
+    <div class="container">
+        <!-- Animated Background -->
+        <div class="bg-animation">
+            <div class="bg-shape shape1"></div>
+            <div class="bg-shape shape2"></div>
+            <div class="bg-shape shape3"></div>
+            <div class="bg-shape shape4"></div>
+            <div class="bg-shape shape5"></div>
+        </div>
+
+        <!-- Particle System -->
+        <div class="particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+
+        <!-- Mega Confetti Storm -->
+        <div class="confetti-container">
+            <div class="confetti confetti1"></div>
+            <div class="confetti confetti2"></div>
+            <div class="confetti confetti3"></div>
+            <div class="confetti confetti4"></div>
+            <div class="confetti confetti5"></div>
+            <div class="confetti confetti6"></div>
+            <div class="confetti confetti7"></div>
+            <div class="confetti confetti8"></div>
+            <div class="confetti confetti9"></div>
+            <div class="confetti confetti10"></div>
+            <div class="confetti confetti11"></div>
+            <div class="confetti confetti12"></div>
+            <div class="confetti confetti13"></div>
+            <div class="confetti confetti14"></div>
+            <div class="confetti confetti15"></div>
+        </div>
+        
+        <!-- Flying Balloons -->
+        <div class="balloon balloon1">🎈</div>
+        <div class="balloon balloon2">🎈</div>
+        <div class="balloon balloon3">🎈</div>
+        <div class="balloon balloon4">🎈</div>
+        <div class="balloon balloon5">🎈</div>
+        <div class="balloon balloon6">🎈</div>
+        <div class="balloon balloon7">🎈</div>
+        <div class="balloon balloon8">🎈</div>
+        
+        <!-- Floating Friendship Icons -->
+        <div class="heart heart1">🤝</div>
+        <div class="heart heart2">👫</div>
+        <div class="heart heart3">🎈</div>
+        <div class="heart heart4">🎁</div>
+        <div class="heart heart5">🎊</div>
+        <div class="heart heart6">🤝</div>
+        <div class="heart heart7">👫</div>
+        <div class="heart heart8">🎈</div>
+        
+        <!-- Twinkling Stars -->
+        <div class="star star1">⭐</div>
+        <div class="star star2">✨</div>
+        <div class="star star3">🌟</div>
+        <div class="star star4">⭐</div>
+        <div class="star star5">✨</div>
+        <div class="star star6">🌟</div>
+        <div class="star star7">⭐</div>
+        <div class="star star8">✨</div>
+        <div class="star star9">🌟</div>
+        <div class="star star10">⭐</div>
+        
+        <!-- Fireworks -->
+        <div class="firework firework1"></div>
+        <div class="firework firework2"></div>
+        <div class="firework firework3"></div>
+        <div class="firework firework4"></div>
+        
+        <!-- Music Controls -->
+        <div class="music-controls">
+            <button class="music-btn" id="musicBtn" onclick="toggleMusic()">🎵</button>
+            <div class="music-info">
+                <span class="song-title">Happy Birthday - Disco Singh</span>
+            </div>
+        </div>
+
+        <!-- Page 1: Image Showcase -->
+        <div class="page page-1 active" id="page1">
+            <div class="page-content">
+                <div class="page-glow"></div>
+                <h1 class="page-title">
+                    <span class="title-word">Happy</span>
+                    <span class="title-word">Birthday!</span>
+                </h1>
+                <h2 class="name">ash_iqbal</h2>
+                <h3 class="subtitle">My Amazing Best Friend</h3>
+                
+                <!-- Friend's Image -->
+                <div class="friend-image-container">
+                    <div class="image-glow"></div>
+                    <div class="image-sparkles">
+                        <span class="image-sparkle">✨</span>
+                        <span class="image-sparkle">✨</span>
+                        <span class="image-sparkle">✨</span>
+                        <span class="image-sparkle">✨</span>
+                        <span class="image-sparkle">✨</span>
+                        <span class="image-sparkle">✨</span>
+                    </div>
+                    <img src="WhatsApp Image 2025-09-15 at 19.33.03.jpeg" alt="My Best Friend" class="friend-image">
+                    <div class="image-frame"></div>
+                </div>
+                
+                <div class="page-navigation">
+                    <button class="next-btn" onclick="nextPage()">Next →</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 2: Cake Animation -->
+        <div class="page page-2" id="page2">
+            <div class="page-content">
+                <div class="page-glow"></div>
+                <h1 class="page-title">🎂 Birthday Cake! 🎂</h1>
+                <h2 class="name">ash_iqbal</h2>
+                
+                <!-- Animated Cake -->
+                <div class="cake-showcase">
+                    <div class="cake-container">
+                        <div class="cake">🎂</div>
+                        <div class="cake-sparkles">
+                            <span class="sparkle">✨</span>
+                            <span class="sparkle">✨</span>
+                            <span class="sparkle">✨</span>
+                            <span class="sparkle">✨</span>
+                            <span class="sparkle">✨</span>
+                            <span class="sparkle">✨</span>
+                        </div>
+                        <div class="cake-candles">
+                            <div class="candle">🕯️</div>
+                            <div class="candle">🕯️</div>
+                            <div class="candle">🕯️</div>
+                            <div class="candle">🕯️</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Floating Elements -->
+                    <div class="floating-elements">
+                        <div class="floating-emoji">🎈</div>
+                        <div class="floating-emoji">🎁</div>
+                        <div class="floating-emoji">🎊</div>
+                        <div class="floating-emoji">🌟</div>
+                        <div class="floating-emoji">✨</div>
+                        <div class="floating-emoji">💖</div>
+                    </div>
+                </div>
+                
+                <div class="page-navigation">
+                    <button class="prev-btn" onclick="prevPage()">← Back</button>
+                    <button class="next-btn" onclick="nextPage()">Next →</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 3: Birthday Letter -->
+        <div class="page page-3" id="page3">
+            <div class="page-content">
+                <div class="page-glow"></div>
+                <h1 class="page-title">💌 Birthday Letter 💌</h1>
+                <h2 class="name">ash_iqbal</h2>
+                
+                <!-- Letter Content -->
+                <div class="letter-container">
+                    <div class="letter">
+                        <div class="letter-header">
+                            <div class="letter-date">Today's Date</div>
+                            <div class="letter-to">To: My Dearest Best Friend</div>
+                            <div class="letter-from">From: saud bilal</div>
+                        </div>
+                        
+                        <div class="letter-body">
+                            <p class="letter-greeting">Dear ash_iqbal,</p>
+                            
+                            <p class="letter-text">
+                                Happiest birthday madam Allah. Pak apku khush Rakhy. Aur apaki. Harr. Khawab pury. Kary. Aur. Hasta. Khilta banai. Ap. Madam g. Meri life ka wu hissa. Hu ju kbhi bhi bhula. Nahi jaa sakta Ab tak. Jitna. Hum dono. Ka chl. Rhaa Iss ma. Bhut. Mushkilat bhi aye aur. Achy pal. Bhi. Lakin ma hamesha chao ka ap aise. Hi. Nibhany wali dost bani rhy. Lakin. Ap wahid. Hi ha. Ju mujhe smjh. Payi ❤️❤️❤️❤️❤️
+                            </p>
+                            
+                            <p class="letter-text">
+                                And. Aur wu ha. Jis. Na mujhe harr buri aur achy cheezon ka bary ma. Mashwary. Diye aur smjhya. Bas. Ap Best ha. Allah. Pak. Apku hamesha khush rakhy. Happy birthday Madam g ❤️❤️❤️🎂🎂🎂
+                            </p>
+                            
+                            <p class="letter-closing">
+                                With lots of love and best wishes,<br>
+                                Your Best Friend Forever 🤝
+                            </p>
+                        </div>
+                        
+                        <div class="letter-footer">
+                            <div class="letter-hearts">💕💖💗💝💕</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="page-navigation">
+                    <button class="prev-btn" onclick="prevPage()">← Back</button>
+                    <button class="restart-btn" onclick="restartPages()">🔄 Restart</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Floating Gifts -->
+        <div class="gift gift1">🎁</div>
+        <div class="gift gift2">🎁</div>
+        <div class="gift gift3">🎁</div>
+        <div class="gift gift4">🎁</div>
+        
+        <!-- Rainbow Effect -->
+        <div class="rainbow"></div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        let currentPage = 1;
+        const totalPages = 3;
+        let isMusicPlaying = false;
+        let musicTimer = null;
+
+        // Music functionality
+        function playBirthdaySong() {
+            const audio = document.getElementById('birthdaySong');
+            const musicBtn = document.getElementById('musicBtn');
+            
+            if (audio) {
+                audio.currentTime = 6; // Start from 6 seconds (skip intro)
+                audio.volume = 0.8; // Set volume to 80% for better experience
+                
+                // Try to play automatically
+                const playPromise = audio.play();
+                
+                if (playPromise !== undefined) {
+                    playPromise.then(() => {
+                        isMusicPlaying = true;
+                        musicBtn.textContent = '🔊';
+                        musicBtn.classList.add('playing');
+                        
+                        // Stop after 20 seconds (so it plays from 6s to 26s)
+                        musicTimer = setTimeout(() => {
+                            audio.pause();
+                            isMusicPlaying = false;
+                            musicBtn.textContent = '🎵';
+                            musicBtn.classList.remove('playing');
+                        }, 20000); // 20 seconds
+                    }).catch((error) => {
+                        console.log('Auto-play failed, user interaction required:', error);
+                        // Show play button if auto-play fails
+                        musicBtn.textContent = '🎵';
+                        musicBtn.title = 'Click to play music';
+                    });
+                }
+            }
+        }
+
+        function toggleMusic() {
+            const audio = document.getElementById('birthdaySong');
+            const musicBtn = document.getElementById('musicBtn');
+            
+            if (isMusicPlaying) {
+                audio.pause();
+                isMusicPlaying = false;
+                musicBtn.textContent = '🎵';
+                musicBtn.classList.remove('playing');
+                if (musicTimer) {
+                    clearTimeout(musicTimer);
+                    musicTimer = null;
+                }
+            } else {
+                // When manually playing, also start from 6 seconds
+                audio.currentTime = 6;
+                playBirthdaySong();
+            }
+        }
+
+        // Auto-play music when page loads automatically
+        window.addEventListener('load', function() {
+            // Small delay to ensure everything is loaded
+            setTimeout(() => {
+                playBirthdaySong();
+            }, 1000);
+        });
+
+        function nextPage() {
+            if (currentPage < totalPages) {
+                // Hide current page
+                document.getElementById(`page${currentPage}`).classList.remove('active');
+                document.getElementById(`page${currentPage}`).classList.add('slide-out-left');
+                
+                // Show next page
+                currentPage++;
+                setTimeout(() => {
+                    document.getElementById(`page${currentPage}`).classList.add('active');
+                    document.getElementById(`page${currentPage}`).classList.remove('slide-out-right');
+                }, 300);
+            }
+        }
+
+        function prevPage() {
+            if (currentPage > 1) {
+                // Hide current page
+                document.getElementById(`page${currentPage}`).classList.remove('active');
+                document.getElementById(`page${currentPage}`).classList.add('slide-out-right');
+                
+                // Show previous page
+                currentPage--;
+                setTimeout(() => {
+                    document.getElementById(`page${currentPage}`).classList.add('active');
+                    document.getElementById(`page${currentPage}`).classList.remove('slide-out-left');
+                }, 300);
+            }
+        }
+
+        function restartPages() {
+            // Hide all pages
+            for (let i = 1; i <= totalPages; i++) {
+                document.getElementById(`page${i}`).classList.remove('active', 'slide-out-left', 'slide-out-right');
+            }
+            
+            // Show first page
+            currentPage = 1;
+            setTimeout(() => {
+                document.getElementById('page1').classList.add('active');
+            }, 300);
+        }
+
+        // Auto-advance to next page after 5 seconds on page 1
+        setTimeout(() => {
+            if (currentPage === 1) {
+                nextPage();
+            }
+        }, 5000);
+
+        // Create floating emojis for page 2
+        function createFloatingEmojis() {
+            const emojis = ['🎂', '🎉', '💕', '🌟', '✨', '🎁', '🎈', '💖'];
+            for (let i = 0; i < 20; i++) {
+                setTimeout(() => {
+                    const emoji = document.createElement('div');
+                    emoji.innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
+                    emoji.style.position = 'fixed';
+                    emoji.style.fontSize = '2rem';
+                    emoji.style.left = Math.random() * window.innerWidth + 'px';
+                    emoji.style.top = window.innerHeight + 'px';
+                    emoji.style.zIndex = '9999';
+                    emoji.style.animation = 'float-up 4s ease-out forwards';
+                    emoji.style.pointerEvents = 'none';
+                    
+                    document.body.appendChild(emoji);
+                    
+                    setTimeout(() => {
+                        emoji.remove();
+                    }, 4000);
+                }, i * 200);
+            }
+        }
+
+        // Start floating emojis when page 2 is active
+        setInterval(() => {
+            if (currentPage === 2) {
+                createFloatingEmojis();
+            }
+        }, 3000);
+
+        // Add floating animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes float-up {
+                0% {
+                    transform: translateY(0) rotate(0deg);
+                    opacity: 1;
+                }
+                100% {
+                    transform: translateY(-100vh) rotate(360deg);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
