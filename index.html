@@ -100,13 +100,6 @@
         <div class="firework firework3"></div>
         <div class="firework firework4"></div>
         
-        <!-- Music Controls -->
-        <div class="music-controls">
-            <button class="music-btn" id="musicBtn" onclick="toggleMusic()">🎵</button>
-            <div class="music-info">
-                <span class="song-title">Happy Birthday - Disco Singh</span>
-            </div>
-        </div>
 
         <!-- Page 1: Image Showcase -->
         <div class="page page-1 active" id="page1">
@@ -248,10 +241,9 @@
         let isMusicPlaying = false;
         let musicTimer = null;
 
-        // Music functionality
+        // Music functionality - Auto play without button
         function playBirthdaySong() {
             const audio = document.getElementById('birthdaySong');
-            const musicBtn = document.getElementById('musicBtn');
             
             if (audio) {
                 audio.currentTime = 6; // Start from 6 seconds (skip intro)
@@ -263,43 +255,17 @@
                 if (playPromise !== undefined) {
                     playPromise.then(() => {
                         isMusicPlaying = true;
-                        musicBtn.textContent = '🔊';
-                        musicBtn.classList.add('playing');
                         
                         // Stop after 20 seconds (so it plays from 6s to 26s)
                         musicTimer = setTimeout(() => {
                             audio.pause();
                             isMusicPlaying = false;
-                            musicBtn.textContent = '🎵';
-                            musicBtn.classList.remove('playing');
                         }, 20000); // 20 seconds
                     }).catch((error) => {
                         console.log('Auto-play failed, user interaction required:', error);
-                        // Show play button if auto-play fails
-                        musicBtn.textContent = '🎵';
-                        musicBtn.title = 'Click to play music';
+                        // Music will play when user interacts with page
                     });
                 }
-            }
-        }
-
-        function toggleMusic() {
-            const audio = document.getElementById('birthdaySong');
-            const musicBtn = document.getElementById('musicBtn');
-            
-            if (isMusicPlaying) {
-                audio.pause();
-                isMusicPlaying = false;
-                musicBtn.textContent = '🎵';
-                musicBtn.classList.remove('playing');
-                if (musicTimer) {
-                    clearTimeout(musicTimer);
-                    musicTimer = null;
-                }
-            } else {
-                // When manually playing, also start from 6 seconds
-                audio.currentTime = 6;
-                playBirthdaySong();
             }
         }
 
@@ -310,6 +276,19 @@
                 playBirthdaySong();
             }, 1000);
         });
+
+        // Also try to play music on first user interaction (click, touch, etc.)
+        document.addEventListener('click', function() {
+            if (!isMusicPlaying) {
+                playBirthdaySong();
+            }
+        }, { once: true });
+
+        document.addEventListener('touchstart', function() {
+            if (!isMusicPlaying) {
+                playBirthdaySong();
+            }
+        }, { once: true });
 
         function nextPage() {
             if (currentPage < totalPages) {
